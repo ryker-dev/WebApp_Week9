@@ -1,7 +1,18 @@
-import React from 'react';
+import React from 'react'
 
-function MyContainer() {
-  return <h2>My list</h2>;
+const MyList = (props) => {
+  return (
+    <div>
+        <h1>{props.header}</h1>
+        <ol>
+        {props.items.map((item) => (
+            <li>
+              <p>{item.text}</p>
+            </li>
+        ))}
+        </ol>
+    </div>
+  )
 }
 
-export default MyContainer;
+export default MyList;
