@@ -1,11 +1,14 @@
 import { useState } from "react";
 
-const AddItem = () => {
+const AddItem = ({onAdd}) => {
   const [text, setText] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault()
 
+    onAdd({item: text})
+
+    setText("")
 }
 
 

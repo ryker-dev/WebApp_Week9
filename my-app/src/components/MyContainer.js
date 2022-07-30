@@ -3,6 +3,18 @@ import { useState } from "react";
 import AddItem from "./AddItem";
 
 const MyContainer = () => {
+
+    function AddItem ({onAdd}) {
+        const [text, setText] = useState('')
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault()
+
+        onAdd({item: text})
+
+        setText("")
+    }
   const [items, setItems] = useState([
     {
       id: 1,
@@ -15,10 +27,10 @@ const MyContainer = () => {
     {
       id: 3,
       text: "Third item",
-    },
+    }
   ]);
 
-  const AddItem = (item) => {
+  const addItem = (item) => {
     const id = Math.floor(Math.random() * 1000000 + 1000);
     const newItem = { id, ...item };
     setItems([...items, newItem]);
@@ -43,6 +55,7 @@ const MyContainer = () => {
           </button>
         </from>
       </div>
+      <AddItem onAdd={addItem} />
     </div>
   );
 };
