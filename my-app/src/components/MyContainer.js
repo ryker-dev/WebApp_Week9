@@ -1,7 +1,8 @@
 import React from 'react';
+import MyList from './MyList.js';
 
 function MyContainer() {
-  return <h2>My container</h2>;
+  return <MyList />;
 }
 
 export default MyContainer;
