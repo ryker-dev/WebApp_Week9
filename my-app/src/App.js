@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import MyContainer from './components/MyContainer.js';
 import MyList from './components/MyList.js';
+import '@testing-library/jest-dom/extend-expect';
 
 function App() {
   return (
