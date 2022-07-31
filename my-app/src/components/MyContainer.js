@@ -18,16 +18,10 @@ const MyContainer = () => {
     },
   ]);
 
-  const AddItem = (item) => {
-    const id = Math.floor(Math.random() * 1000000 + 1000);
-    const newItem = { id, ...item };
-    setItems([...items, newItem]);
-  };
-
   return (
     <div>
       <MyList header="List Header" items={items} />
-      <div>
+{/*       <div>
         <from onSubmit={AddItem.onSubmit}>
           <label for="text">Item</label>
           <textarea
@@ -42,7 +36,7 @@ const MyContainer = () => {
             Add
           </button>
         </from>
-      </div>
+      </div> */}
     </div>
   );
 };
