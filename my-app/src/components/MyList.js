@@ -7,7 +7,7 @@ const MyList = (props) => {
         <ol>
         {props.items.map((item) => (
             <li>
-              <p>{item.text}</p>
+              {item.text}
             </li>
         ))}
         </ol>
